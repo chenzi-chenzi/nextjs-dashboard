@@ -6,6 +6,7 @@ import { fetchRevenue, fetchLatestInvoices, fetchCardData } from '../lib/data';
 
  
 export default async function Page() {
+  // console.log('页面被渲染了');
   const revenue = await fetchRevenue();
   const latestInvoices = await fetchLatestInvoices();
   const {numberOfCustomers, numberOfInvoices, totalPaidInvoices, totalPendingInvoices} = await fetchCardData();
